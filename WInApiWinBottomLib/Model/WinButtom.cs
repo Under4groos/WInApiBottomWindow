@@ -42,9 +42,11 @@ namespace WInApiWinBottomLib.Model
 
             MainWindow.Loaded += (o, e) =>
             {  
-                WinApi.SetWindowPos(HWD, HWND_BOTTOM, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE | SWP_NOACTIVATE);
                 HwndSource src = HwndSource.FromHwnd(HWD);
                 src.AddHook(new HwndSourceHook(WndProc));
+
+                WinApi.SetWindowPos(HWD, HWND_BOTTOM, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE | SWP_NOACTIVATE);
+
             };
             MainWindow.MouseEnter += (o, e) =>
             {

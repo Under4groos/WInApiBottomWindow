@@ -30,7 +30,7 @@ namespace TestWpfApp
                 WinButtom winButtom = new WinButtom(this);
                 winButtom.SerEvent();
             };
-          
+             
         }
     }
 }
